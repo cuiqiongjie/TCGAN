@@ -839,7 +839,7 @@ def load_and_convert_h36m_to_3d_and_save(path_to_dataset, subjects, actions, sam
                 else:
                     sampled_seq = np.concatenate((sampled_seq, seq_sel), axis=0)
                     complete_seq = np.append(complete_seq, the_sequence, axis=0)
-                    dir_name_3d = path_to_dataset.replace('h3.6m', 'h3.6m3d', 1)+'S{}'.format(subj)+'/'
+                    dir_name_3d = path_to_dataset.replace('h36m', 'h3.6m3d', 1)+'S{}'.format(subj)+'/'
                     if not os.path.isdir(dir_name_3d):
                         os.makedirs(dir_name_3d)
                     np.savetxt(dir_name_3d+'{0}_{1}.txt'.format( action, subact), the_sequence)

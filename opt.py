@@ -24,7 +24,7 @@ class Options:
         # ===============================================================
         #                     General options
         # ===============================================================
-        self.parser.add_argument('--data_dir', type=str, default='../data/h3.6m/dataset', help='path to H36M dataset')
+        self.parser.add_argument('--data_dir', type=str, default='../data/h36m/dataset', help='path to H36M dataset')
         self.parser.add_argument('--data_dir_3dpw', type=str, default='./data/cmu_mocap/', help='path to 3DPW dataset')
         self.parser.add_argument('--data_dir_cmu', type=str, default='./data/cmu_mocap/', help='path to CMU dataset')
         self.parser.add_argument('--exp', type=str, default='test', help='ID of experiment')
