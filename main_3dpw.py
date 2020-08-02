@@ -26,7 +26,7 @@ import pandas as pd
 
 import loss_funcs, utils as utils
 from opt import Options
-from pose3dpw import Pose3dPW
+from dpw3 import Pose3dPW
 import model as nnmodel
 import data_utils as data_utils
 

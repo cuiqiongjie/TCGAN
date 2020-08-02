@@ -25,7 +25,7 @@ import pandas as pd
 
 import loss_funcs, utils as utils
 from opt import Options
-from h36motion3d import H36motion3D
+from h36m3d import H36motion3D
 import model as nnmodel
 import data_utils as data_utils
 

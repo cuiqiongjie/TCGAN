@@ -17,7 +17,7 @@ from matplotlib import pyplot as plt
 
 import loss_funcs, utils as utils
 from opt import Options
-from h36motion import H36motion
+from h36m import H36motion
 import model as nnmodel
 import data_utils as data_utils
 import viz as viz

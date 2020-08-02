@@ -25,7 +25,7 @@ from progress.bar import Bar
 import pandas as pd
 import loss_funcs, utils as utils
 from opt import Options
-from cmu_motion_3d import CMU_Motion3D
+from cmu_3d import CMU_Motion3D
 import model as nnmodel
 import data_utils as data_utils
 

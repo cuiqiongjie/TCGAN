@@ -26,7 +26,7 @@ import pandas as pd
 
 import loss_funcs, utils as utils
 from opt import Options
-from cmu_motion import CMU_Motion
+from cmu import CMU_Motion
 import model as nnmodel
 import data_utils as data_utils
 
