@@ -11,7 +11,6 @@ __all__ = ['ColoredRenderer', 'TexturedRenderer', 'DepthRenderer']
 
 import numpy as np
 from .cvwrap import cv2
-import time
 import platform
 import scipy.sparse as sp
 from copy import deepcopy
@@ -112,9 +111,9 @@ class DepthRenderer(BaseRenderer):
             depth = self.depth_image
 
             if self.overdraw:
-                result1 = common.dImage_wrt_2dVerts_bnd(depth, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.f, self.boundaryid_image != 4294967295)
+                result1 = common.dImage_wrt_2dVerts_bnd(depth, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size / 3, self.f, self.boundaryid_image != 4294967295)
             else:
-                result1 = common.dImage_wrt_2dVerts(depth, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.f)
+                result1 = common.dImage_wrt_2dVerts(depth, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size / 3, self.f)
 
             # result1 = common.dImage_wrt_2dVerts(depth, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.f)
 
@@ -244,7 +243,7 @@ class BoundaryRenderer(BaseRenderer):
 
         barycentric = self.barycentric_image
     
-        return common.dImage_wrt_2dVerts(self.color_image, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.vpe)
+        return common.dImage_wrt_2dVerts(self.color_image, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size / 3, self.vpe)
 
     def on_changed(self, which):
         if 'frustum' in which:
@@ -302,9 +301,9 @@ class ColoredRenderer(BaseRenderer):
 
         if wrt is self.camera:
             if self.overdraw:
-                return common.dImage_wrt_2dVerts_bnd(color, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.f, self.boundaryid_image != 4294967295)
+                return common.dImage_wrt_2dVerts_bnd(color, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size / 3, self.f, self.boundaryid_image != 4294967295)
             else:
-                return common.dImage_wrt_2dVerts(color, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size/3, self.f)
+                return common.dImage_wrt_2dVerts(color, visible, visibility, barycentric, self.frustum['width'], self.frustum['height'], self.v.r.size / 3, self.f)
 
         elif wrt is self.vc:
             return common.dr_wrt_vc(visible, visibility, self.f, barycentric, self.frustum, self.vc.size, num_channels=self.num_channels)

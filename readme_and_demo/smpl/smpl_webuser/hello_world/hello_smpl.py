@@ -52,7 +52,7 @@ m.pose[:] = np.random.rand(m.pose.size) * .2
 m.betas[:] = np.random.rand(m.betas.size) * .03
 
 ## Write to an .obj file
-outmesh_path = './hello_smpl.obj'
+outmesh_path = 'hello_smpl.obj'
 with open( outmesh_path, 'w') as fp:
     for v in m.r:
         fp.write( 'v %f %f %f\n' % ( v[0], v[1], v[2]) )
