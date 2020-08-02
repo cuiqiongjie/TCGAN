@@ -24,9 +24,9 @@ class Options:
         # ===============================================================
         #                     General options
         # ===============================================================
-        self.parser.add_argument('--data_dir', type=str, default='../data/h36m/dataset', help='path to H36M dataset')
-        self.parser.add_argument('--data_dir_3dpw', type=str, default='./data/cmu_mocap/', help='path to 3DPW dataset')
-        self.parser.add_argument('--data_dir_cmu', type=str, default='./data/cmu_mocap/', help='path to CMU dataset')
+        self.parser.add_argument('--data_dir', type=str, default='./h36m/dataset', help='path to H36M dataset')
+        self.parser.add_argument('--data_dir_3dpw', type=str, default='/3DPW/sequenceFiles', help='path to 3DPW dataset')
+        self.parser.add_argument('--data_dir_cmu', type=str, default='./cmu_mocap', help='path to CMU dataset')
         self.parser.add_argument('--exp', type=str, default='test', help='ID of experiment')
         self.parser.add_argument('--ckpt', type=str, default='checkpoint/', help='path to save checkpoint')
 
