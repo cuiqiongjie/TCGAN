@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+@IDE: PyCharm
+@author: Cui
+@contact: cuiqiongjie@126.com
+@time: 2020,7月
+Copyright (c),Nanjing University of Science and Technology
+
+@Desc:
+
+"""
+
 """
     Functions to visualize human poses
     adapted from https://github.com/una-dinosauria/human-motion-prediction/blob/master/src/viz.py
@@ -8,7 +21,7 @@ import numpy as np
 import h5py
 import os
 from mpl_toolkits.mplot3d import Axes3D
-from utils import forward_kinematics as fk
+import forward_kinematics as fk
 
 
 class Ax3DPose(object):

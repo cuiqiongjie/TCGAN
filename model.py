@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+@IDE: PyCharm
+@author: Cui
+@contact: cuiqiongjie@126.com
+@time: 2020,7月
+Copyright (c),Nanjing University of Science and Technology
+
+@Desc:
+
+"""
 from __future__ import absolute_import
 from __future__ import print_function
 

@@ -2,7 +2,7 @@ import pickle as pkl
 from os import walk
 from torch.utils.data import Dataset
 import numpy as np
-from utils import data_utils
+import data_utils
 
 from matplotlib import pyplot as plt
 
