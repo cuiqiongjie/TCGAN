@@ -47,7 +47,7 @@ def main(opt):
     output_n = opt.output_n
     dct_n = opt.dct_n
 
-    model = nnmodel.GCN(input_feature=dct_n, hidden_feature=opt.linear_size, p_dropout=opt.dropout,
+    model = nnmodel.TCN(input_feature=dct_n, hidden_feature=opt.linear_size, p_dropout=opt.dropout,
                         num_stage=opt.num_stage, node_n=69)
 
     if is_cuda:

@@ -52,7 +52,7 @@ def main(opt):
     sample_rate = opt.sample_rate
 
     # 48 nodes for angle prediction
-    model = nnmodel.GCN(input_feature=dct_n, hidden_feature=opt.linear_size, p_dropout=opt.dropout,
+    model = nnmodel.TCN(input_feature=dct_n, hidden_feature=opt.linear_size, p_dropout=opt.dropout,
                         num_stage=opt.num_stage, node_n=48)
 
 
@@ -66,7 +66,7 @@ def main(opt):
 
     # continue from checkpoint
     if opt.is_load:
-        model_path_len = 'checkpoint/test/ckpt_main_gcn_muti_att_best.pth.tar'
+        model_path_len = 'checkpoint/test/ckpt_main_TCN_muti_att_best.pth.tar'
         print(">>> loading ckpt len from '{}'".format(model_path_len))
         if is_cuda:
             ckpt = torch.load(model_path_len)

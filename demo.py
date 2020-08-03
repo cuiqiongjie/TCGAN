@@ -32,7 +32,7 @@ def main(opt):
     output_n = opt.output_n
     sample_rate = opt.sample_rate
 
-    model = nnmodel.GCN(input_feature=(input_n + output_n), hidden_feature=opt.linear_size, p_dropout=opt.dropout,
+    model = nnmodel.TCN(input_feature=(input_n + output_n), hidden_feature=opt.linear_size, p_dropout=opt.dropout,
                         num_stage=opt.num_stage, node_n=48)
     if is_cuda:
         model.cuda()

@@ -46,7 +46,7 @@ def main(opt):
     output_n = opt.output_n
     dct_n = opt.dct_n
 
-    model = nnmodel.GCN(input_feature=dct_n, hidden_feature=opt.linear_size,
+    model = nnmodel.TCN(input_feature=dct_n, hidden_feature=opt.linear_size,
                         p_dropout=opt.dropout, num_stage=opt.num_stage, node_n=75)
 
     if is_cuda:
@@ -54,7 +54,7 @@ def main(opt):
     print(">>> total params: {:.2f}M".format(sum(p.numel() for p in model.parameters()) / 1000000.0))
     optimizer = torch.optim.Adam(model.parameters(), lr=opt.lr)
     if opt.is_load:
-        model_path_len = 'checkpoint/test/ckpt_main_gcn_muti_att_best.pth.tar'
+        model_path_len = 'checkpoint/test/ckpt_main_TCN_muti_att_best.pth.tar'
         print(">>> loading ckpt len from '{}'".format(model_path_len))
         if is_cuda:
             ckpt = torch.load(model_path_len)
